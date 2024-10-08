@@ -10,4 +10,6 @@ pip install -r requirements.txt
 
 within a terminal running from this folder.
 
-To use the scraper, run the files within `Notebook.ipynb`
+To use the scraper, run the files within `Notebook.ipynb`.
+
+More documentation to follow!
