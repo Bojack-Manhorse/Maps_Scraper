@@ -209,7 +209,7 @@ class MapsScraper:
         time_button = self.driver.find_elements(By.CLASS_NAME, 'puWIL')
 
         # If the opening times exist, click the button so they are shown.
-        if len(time_button) > 0:
+        try:
             time_button[0].click()
 
             opening_times = self.driver.find_elements(By.CLASS_NAME, 't39EBf')
@@ -221,7 +221,7 @@ class MapsScraper:
             dict_of_results['Opening times'] = self.sort_opening_times(opening_times[0].get_attribute('aria-label'))
         
         # If opening times do not exist, return 'None given'.
-        else:
+        except:
             dict_of_results['Opening times'] = 'None given'
 
         return dict_of_results
@@ -236,7 +236,16 @@ class MapsScraper:
         Returns:
             list - List of dictionaries containing the details of each merchant.
         """
-        return [self.crawl_individual_link(link) for link in self.list_of_links if self.list_of_links.index(link) < limit]
+        result = []
+        for link in self.list_of_links:
+            try:
+                data = self.crawl_individual_link(link)
+                result.append(data)
+            except:
+                pass
+            if len(result) > limit:
+                break
+        return result
 
     def crawl_all_links(self, limit:int = math.inf):
         """
