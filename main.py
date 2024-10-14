@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     limit = int(input("Please enter a maximum limit to the number of merchants scraped (Around 300 is a sensible limit)."))
 
-    print(f'The search query you entered is "{search_query}" and the results will be saved in the file "{destination_file}", and the scraper will automatically terminate after it has scraped {limit} merchants.')
+    print(f'The search query you entered is "{search_query}", the results will be saved in the file "{destination_file}", and the scraper will automatically terminate after it has scraped {limit} merchants.')
 
     input("Press Enter to continue.")
 
