@@ -9,6 +9,10 @@ git clone https://gitlab.com/netfm/google_maps_scraper
 cd google_maps_scraper
 ```
 
+Or download the repository as a zip:
+
+![](readme_images/Download_from_Gitlab.gif)
+
 To run the program, python, firefox and selenium will need to be installed.
 
 ### Python
@@ -37,9 +41,30 @@ echo $PATH
 
 ### Jupyter Notebooks
 
-A method to view an operate jupyter notebooks will also be required. The easiest way is through VSCode, which can be found here: https://code.visualstudio.com/.
+If you wish to use the notebook to operate the scraper, you'll need a way to use jupyter notebooks. The easiest way is through VSCode, which can be found here: https://code.visualstudio.com/.
 
 ## Usage
+
+### Terminal method
+
+Open a terminal window (Command + Spacebar and search terminal if on macOS), and navigate to the folder the repository is stored in, for example, if the scraper was stored in the `Downloads` folder, run:
+
+
+```
+cd Downloads/google_maps_scraper-main
+```
+
+To operate the scraper, run:
+
+```
+python3 main.py
+```
+
+then follow the onscreen prompts.
+
+![](readme_images/Scraper.gif)
+
+### Jupyter Notebooks Method
 
 Launch VSCode and open the folder containing the repository:
 
