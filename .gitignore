@@ -1,5 +1,6 @@
-Links.txt
-data.json
+*.txt
+*.json
+backend
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
