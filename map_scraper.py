@@ -247,6 +247,20 @@ class MapsScraper:
                 break
         return result
 
+    def filter_postcode(self, filter_string:str):
+        """
+        Filters self.list_of_data for items containing `filter_string` in the postcode.
+
+        Args:
+            filter_string:str - The string to look for in the postcode.
+        """
+
+        # Function which gets the postcode from an Address string.
+        get_postcode = lambda x : x.split(' ')[-3] + x.split(' ')[-2]
+
+        # Filter self.list_of_data.
+        self.list_of_data = [item for item in self.list_of_data if filter_string in get_postcode(item['Address'])]
+
     def crawl_all_links(self, limit:int = math.inf):
         """
         Sets 'self.list_of_data' to be the results of return_crawl_all_links.
