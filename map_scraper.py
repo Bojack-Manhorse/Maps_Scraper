@@ -247,6 +247,16 @@ class MapsScraper:
                 break
         return result
 
+    def get_postcodes(self):
+        """
+        Returns a list of all the postcodes of all items in self.list_of_data.
+        """
+
+        # Lambda function to get the postcode from an address string.        
+        get_postcode = lambda x : x.split(' ')[-3] + x.split(' ')[-2]
+
+        return [get_postcode(item['Address']) for item in self.list_of_data]
+
     def filter_postcode(self, filter_string:str):
         """
         Filters self.list_of_data for items containing `filter_string` in the postcode.
