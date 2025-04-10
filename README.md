@@ -2,17 +2,6 @@
 
 ## Installation
 
-Clone the repository via:
-
-```
-git clone https://gitlab.com/netfm/google_maps_scraper
-cd google_maps_scraper
-```
-
-Or download the repository as a zip:
-
-![](readme_images/Download_from_Gitlab.gif)
-
 To run the program, python, firefox and selenium will need to be installed.
 
 ### Python
